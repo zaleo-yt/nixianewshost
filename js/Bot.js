@@ -69,6 +69,7 @@ Bot.login = function() {
 };
 
 Bot.onReady = function() {
+	client.setActivity(client.guilds.size + " servers")
 	if(process.send) process.send('BotReady');
 	console.log('Bot is ready!');
 	this.preformInitialization();
